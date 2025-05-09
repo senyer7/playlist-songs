@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Конструктор плейлистов</title>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="https://code.s3.yandex.net/web-code/dom/logo.svg"
+        alt=""
+        class="header__logo"
+      />
+      <p class="header__logo-sub">Конструктор плейлистов</p>
+    </header>
+    <main class="container">
+      <div class="cover">
+        <div class="cover__image"></div>
+        <h1 class="cover__heading">Плейлист</h1>
+      </div>
+      <div class="block form">
+        <h3>Добавить песню</h3>
+        <div class="input">
+          <input
+            type="text"
+            placeholder="Название"
+            class="input__text input__text_type_song"
+          />
+          <input
+            type="text"
+            placeholder="Исполнитель"
+            class="input__text input__text_type_artist"
+          />
+          <button class="form__submit-btn form__submit-btn_action_add">
+            Добавить
+          </button>
+        </div>
+      </div>
+      <div class="block form">
+        <h3>Добавленные</h3>
+        <div class="no-songs">
+          <p class="no-songs__text">Нет добавленных песен</p>
+        </div>
+        <div class="songs-container"></div>
+        <div class="form__submit">
+          <button class="form__submit-btn form__submit-btn_action_reset">
+            Очистить плейлист
+          </button>
+        </div>
+      </div>
+    </main>
+    
+    <template id="song-template">
+      <div class="song">
+        <h4 class="song__artist"></h4>
+        <p class="song__title"></p>
+        <button class="song__like"></button>
+      </div>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
